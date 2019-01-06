@@ -52,7 +52,6 @@ impl Game {
            self.snake.head.y < 0 || self.snake.head.y >= self.dimensions.height ||
            self.snake.body_parts().contains(&self.snake.head) {
             self.status = GameStatus::Over;
-            println!("Score: {}", self.score());
         } else {
             if self.snake.head == self.apple {
                 self.snake.extend_body(movement);
